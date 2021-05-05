@@ -1,0 +1,8 @@
+.navBar_container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid;
+  height: 6rem;
+
+  border-color: rgb(197, 197, 197);
+}

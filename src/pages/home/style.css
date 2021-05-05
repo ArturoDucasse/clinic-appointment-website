@@ -1,0 +1,31 @@
+.home_container {
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  margin: 30px !important;
+  color: #9ea3ab;
+  font-size: xx-large;
+  text-decoration: underline #8cb7ed;
+  text-underline-offset: 10px;
+}
+
+.options {
+  margin: auto;
+  width: 65%;
+  display: flex;
+}
+
+.opt {
+  border-radius: 25px;
+  margin: 35px;
+  width: 50%;
+  max-width: 50%;
+  height: 15rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  color: #9ea3ab;
+  background: #d4e4fa; /* background color here */
+}
