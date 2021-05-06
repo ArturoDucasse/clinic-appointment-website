@@ -6,6 +6,7 @@ import shield from "../../images/fitlex.png";
 import "./style.css";
 
 const NavBar = () => {
+  //Todo: Add text at the right side of the shield
   return (
     <div className="navBar_container">
       <img src={shield} alt="fitlex.me" />

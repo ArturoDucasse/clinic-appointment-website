@@ -21,6 +21,8 @@ const Time = () => {
     );
   };
 
+  //Todo: Refactor code
+  //Todo: Make buttons clickable
   return (
     <>
       <div
