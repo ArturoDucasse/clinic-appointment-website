@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar/navBar";
 import Legal from "./pages/dsgvo-tos/legal";
 import Calendar from "./pages/calendar/Calendar";
 import InputWithIcon from "./pages/userInfo/UserInfo";
+import Time from "./pages/time/Time";
 
 function App() {
   return (
@@ -22,7 +23,9 @@ function App() {
           <Route path="/calendar">
             <Calendar />
           </Route>
-          <Route path="/time"></Route>
+          <Route path="/time">
+            <Time />
+          </Route>
           <Route path="/userInfo">
             <InputWithIcon />
           </Route>
