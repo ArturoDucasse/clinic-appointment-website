@@ -25,6 +25,7 @@ const Time = () => {
   //Todo: Make buttons clickable
   return (
     <>
+      <h1>Wahlen sie die Uhrzeit aus:</h1>
       <div
         className="container"
         style={{
