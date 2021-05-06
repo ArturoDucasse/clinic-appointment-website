@@ -70,7 +70,7 @@ const Time = () => {
       </div>
       <div className="_button" style={{ marginTop: "50px" }}>
         <Button positive size="large">
-          Termin Buchen
+          Weiter zur Registration
         </Button>
       </div>
     </>

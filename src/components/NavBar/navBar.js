@@ -9,7 +9,23 @@ const NavBar = () => {
   //Todo: Add text at the right side of the shield
   return (
     <div className="navBar_container">
-      <img src={shield} alt="fitlex.me" />
+      <div
+        style={{
+          display: "flex",
+          textAlign: "left",
+        }}
+      >
+        <img src={shield} alt="fitlex.me" />
+        <p
+          style={{
+            lineHeight: "20px",
+            padding: "10px",
+          }}
+        >
+          Berlin testet.
+          <br /> Schnell und <br /> launfend.
+        </p>
+      </div>
       <img src={berlin} alt="berlin" />
     </div>
   );
