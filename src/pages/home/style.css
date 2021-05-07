@@ -1,4 +1,6 @@
 .home_container {
+	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
@@ -7,24 +9,46 @@
 	margin: 30px !important;
 	color: #9ea3ab;
 	font-size: xx-large;
+	line-height: 2em;
 	text-decoration: underline #8cb7ed;
 	text-underline-offset: 10px;
 }
 
-.options {
+.options-container {
 	margin: auto;
-	width: 65%;
+	width: 100;
+	display: flex;
+	justify-content: center;
+}
+.options {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+@media screen and (max-width: 736px) {
+	.options {
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 1042px) {
+	.option {
+		width: 18rem;
+		height: 18rem;
+		max-width: 100%;
+	}
 }
 
 .option {
 	border-radius: 25px;
 	margin: 35px;
-	width: 50%;
-	max-width: 50%;
-	height: 15rem;
+	width: 21rem;
+	height: 21rem;
+	max-width: 100%;
 	display: flex;
+	flex-shrink: 1;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;

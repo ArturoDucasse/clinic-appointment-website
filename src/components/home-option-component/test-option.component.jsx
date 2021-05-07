@@ -2,12 +2,16 @@ import React from "react";
 
 import "./test-option.styles.css";
 
-const TestOption = ({ children, title, subtitle }) => (
-	<div className='option'>
+import { withRouter } from "react-router-dom";
+
+const TestOption = ({ children, title, subtitle, path, history }) => (
+	<div className='option' onClick={() => history.push(path)}>
 		{children}
-		<h4> {title} </h4>
-		<p>{subtitle}</p>
+		<h2 className='test-title'> {title} </h2>
+		<p className='test-subtitle'>
+			{subtitle} <br />
+		</p>
 	</div>
 );
 
-export default TestOption;
+export default withRouter(TestOption);
