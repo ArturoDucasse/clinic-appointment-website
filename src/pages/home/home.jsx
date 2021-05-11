@@ -1,34 +1,47 @@
 import React from "react";
 
 import "./style.css";
-const Home = () => {
-  return (
-    <div className="home_container">
-      <div className="header">
-        Bitte wahlen sie eine der folgenden optionen aus:
-      </div>
-      <div className="options">
-        <div className="option-1 opt">
-          <img src="" alt="hola" />
-          <br />
-          <span> PCR-TEST</span>
-          <p>Ich monchte mich fur einen schnellen PCR-Test anmelden</p>
-        </div>
-        <div className="option-2 opt">
-          <img src="" alt="fitles" />
-          <br />
-          <span> ANTIGEN-TEST</span>
-          <p>Ich mochte mich fur einen schnellen Antigen-Test anmelden</p>
-        </div>
-        <div className="option-3 opt">
-          <img src="" alt="hola" />
-          <br />
-          <span> Symptome</span>
-          <p>Welche Symptome hat Corona? </p>
-        </div>
-      </div>
-    </div>
-  );
+
+import {
+	DirectionsWalk,
+	AssignmentInd,
+	FormatItalic,
+} from "@material-ui/icons";
+
+import TestOption from "../../components/home-option-component/test-option.component";
+
+const Home = (props) => {
+	return (
+		<div className='home_container'>
+			<div className='header'>
+				Bitte wählen Sie eine der folgenden Optionen aus:
+			</div>
+			<div className='options-container'>
+				<div className='options'>
+					<TestOption
+						title='PCR-TEST'
+						subtitle='Ich möchte mich für einen schnellen PCR-Test anmelden'
+						path='/pcr/tos'>
+						<DirectionsWalk className='test-icon' alt='Icon' fontSize='large' />
+					</TestOption>
+
+					<TestOption
+						title='ANTIGEN-TEST'
+						subtitle='Ich möchte mich für einen schnellen Antigen-Test anmelden'
+						path='/antigen/tos'>
+						<AssignmentInd className='test-icon' alt='Icon' fontSize='large' />
+					</TestOption>
+
+					<TestOption
+						title='SYMPTOME'
+						subtitle='Welche Symptome hat Corona?    '
+						path='/symptoms'>
+						<FormatItalic className='test-icon' alt='Icon' fontSize='large' />
+					</TestOption>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 export default Home;

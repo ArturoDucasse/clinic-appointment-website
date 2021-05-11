@@ -1,8 +1,27 @@
 .navBar_container {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 2px solid;
-  height: 6rem;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 2px solid;
+	height: 6rem;
 
-  border-color: rgb(197, 197, 197);
+	border-color: rgb(197, 197, 197);
+}
+
+.nav-logo {
+	display: flex;
+	text-align: left;
+	cursor: pointer;
+}
+
+.nav-logo-text {
+	line-height: 20px;
+	padding: 10px;
+	color: rgb(121, 125, 128);
+}
+.fitflex-logo {
+	padding: 6px;
+	padding-left: 2rem;
+}
+.berlin-logo {
+	padding-right: 2rem;
 }
