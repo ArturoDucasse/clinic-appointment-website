@@ -1,51 +1,27 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
+import "./style.css";
 import { Button } from "semantic-ui-react";
 
 const Time = () => {
   //Todo: Move this to its own file
   const ButtonTest = () => {
     return (
-      <div
-        className="button"
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          border: "1px solid",
-          borderRadius: "5px",
-          padding: "5px",
-          margin: "10px",
-          boxShadow: "1px 2px  ",
-        }}
-      >
+      <div className="button">
         <span>Time here</span> <span> Open slots</span>
         <span>{">"}</span>
       </div>
     );
   };
 
-  //Todo: Refactor code
-  //Todo: Make buttons clickable
+  //Todo!: Refactor
+  //Todo: Create time logic
   return (
     <>
       <h1>Wahlen sie die Uhrzeit aus:</h1>
-      <div
-        style={{
-          borderBottom: "2px solid black",
-          width: "400px",
-          margin: "auto",
-          marginBottom: "30px",
-        }}
-      />
-      <div
-        className="container"
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          flexDirection: "row",
-          margin: "10px",
-        }}
-      >
+      <div className="inlineDiv" />
+      <div className="container_time">
         <div className="Morgens" style={{ width: "350px" }}>
           <h2>Morgens</h2>
           <div className="times_container">
@@ -70,7 +46,9 @@ const Time = () => {
       </div>
       <div className="_button" style={{ marginTop: "50px" }}>
         <Button positive size="large">
-          Weiter zur Registration
+          <Link to="./userInfo" style={{ color: "white" }}>
+            Weiter zur Registration
+          </Link>
         </Button>
       </div>
     </>

@@ -1,4 +1,4 @@
-const RenderHeader = () => {
+const RenderHeader = ({ prevMonth, format, currentMonth, nextMonth }) => {
   const dateFormat = "MMMM yyyy";
 
   return (

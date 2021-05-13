@@ -1,4 +1,6 @@
-const RenderDays = () => {
+import { startOfWeek, addDays, format } from "date-fns";
+
+const RenderDays = ({ currentMonth }) => {
   const dateFormat = "EEEE";
   const days = [];
 
@@ -12,7 +14,7 @@ const RenderDays = () => {
     );
   }
 
-  return <div className="days row">{days}</div>;
+  return <div className="days row">{days} </div>;
 };
 
 export default RenderDays;

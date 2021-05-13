@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { addMonths, subMonths } from "date-fns";
+import { addMonths, subMonths, format } from "date-fns";
 
 import { Button } from "semantic-ui-react";
 import "./styles.css";
@@ -28,11 +28,24 @@ const Calendar = () => {
 
   return (
     <div className="calendar">
-      <RenderHeader />
-      <RenderDays />
-      <RenderCells />
+      <RenderHeader
+        prevMonth={prevMonth}
+        format={format}
+        currentMonth={currentMonth}
+        nextMonth={nextMonth}
+      />
+      <RenderDays currentMonth={currentMonth} />
+      <RenderCells
+        onDateClick={onDateClick}
+        currentMonth={currentMonth}
+        selectedDate={selectedDate}
+      />
       <Button positive size="large">
-        <Link to="" style={{ color: "white" }}>
+        <Link
+          to="/time"
+          style={{ color: "white" }}
+          onClick={() => console.log("button clicked")}
+        >
           Weiter zur Terminauswahl
         </Link>
       </Button>

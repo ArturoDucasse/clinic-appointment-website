@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Grid, TextField } from "@material-ui/core";
 import {
   AccountCircle,
@@ -13,7 +13,17 @@ import { Button } from "semantic-ui-react";
 
 import "./style.css";
 
-export default function InputWithIcon() {
+export default function UserInfo() {
+  //Todo: Send this info to database
+  const [vorname, setvorname] = useState("");
+  const [nachname, setnachname] = useState("");
+  const [emailAdresse, setemailAdresse] = useState("");
+  const [geburtsdatum, setgeburtsdatum] = useState("");
+  const [krankenkasse, setkrankenkasse] = useState("");
+  const [krankenkasseNummer, setkrankenkasseNummer] = useState("");
+  const [strabe_Hausnummer, setstrabe_Hausnummer] = useState("");
+  const [postleitzahl, setpostleitzahl] = useState("");
+
   return (
     <div className="container">
       <h2>Daten zur Person</h2>

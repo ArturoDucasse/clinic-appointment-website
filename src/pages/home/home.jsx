@@ -10,7 +10,7 @@ import {
 
 import TestOption from "../../components/home-option-component/test-option.component";
 
-const Home = (props) => {
+const Home = () => {
   return (
     <div className="home_container">
       <div className="header">
