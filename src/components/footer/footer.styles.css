@@ -1,0 +1,35 @@
+.footer-container {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 6rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 10px 0px 10px;
+	border-top: 2px solid;
+	border-color: rgb(197, 197, 197);
+}
+
+.footer-links {
+	font-size: medium;
+	line-height: 20px;
+	padding: 10px;
+	color: rgb(121, 125, 128);
+	cursor: pointer;
+}
+
+/* Styling for footer (responsive) */
+.footer-container {
+	bottom: 0px;
+}
+.App {
+	padding-bottom: 8rem;
+}
+/*@media screen and (max-width: 1092px) {
+	
+}*/
+
+#root {
+	height: auto;
+}
