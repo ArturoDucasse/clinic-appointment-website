@@ -14,6 +14,7 @@ const Home = () => {
           <span> PCR-TEST</span>
           <p>Ich monchte mich fur einen schnellen PCR-Test anmelden</p>
         </div>
+
         <div className="option-2 opt">
           <img src="" alt="fitles" />
           <br />

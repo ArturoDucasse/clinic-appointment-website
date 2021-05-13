@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "./style.css";
 import { Button } from "semantic-ui-react";
 
 const Legal = () => {
+  const [checkBox, setCheckBox] = useState(false);
+  const changeCheckBox = () => setCheckBox(!checkBox);
+
   return (
     <div className="legal_container">
       <header>
@@ -27,14 +31,22 @@ const Legal = () => {
       </div>
 
       <div className="legal_check p">
-        <input type="checkbox" className="checkBox" />
+        <input type="checkbox" className="checkBox" onClick={changeCheckBox} />
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
       </div>
 
       <div className="legal_button">
-        <Button positive size="large">
-          Positive Butt
-        </Button>
+        {checkBox ? (
+          <Button positive size="large">
+            <Link to="/calendar" style={{ color: "white" }}>
+              Positive Butt
+            </Link>
+          </Button>
+        ) : (
+          <Button disabled size="large">
+            Positive Butt
+          </Button>
+        )}
       </div>
     </div>
   );
