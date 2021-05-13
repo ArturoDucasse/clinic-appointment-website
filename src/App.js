@@ -5,8 +5,11 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/navBar";
 import Footer from "./components/footer/footer.component";
 import { Home, Legal, Calendar, UserInfo, Time } from "./pages/index";
+import createAppointment from "./utils/createAppointment";
 
 function App() {
+  let time = new Date();
+  createAppointment(time);
   return (
     <Router>
       <div className="App">

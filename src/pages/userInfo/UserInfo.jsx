@@ -16,7 +16,7 @@ import "./style.css";
 export default function UserInfo() {
   const [
     {
-      target: { value: firstname },
+      target: { value: username },
     },
     setFirstname,
   ] = useState({ target: { value: "" } });
@@ -68,7 +68,7 @@ export default function UserInfo() {
 
   const submitInfo = async () => {
     setdata({
-      firstname,
+      username,
       lastName,
       email,
       birthday,

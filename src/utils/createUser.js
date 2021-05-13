@@ -8,9 +8,8 @@ import axios from "./axios";
  * - Email
  * @param {Object} data
  */
-const createUser = (identifier, data) => {
-  axios.post("auth/local", {
-    identifier: identifier,
+const createUser = (data) => {
+  axios.post("auth/local/register", {
     ...data,
   });
 };

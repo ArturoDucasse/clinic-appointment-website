@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./style.css";
@@ -7,9 +7,14 @@ import { Button } from "semantic-ui-react";
 const Time = () => {
   //Todo: Move this to its own file
   const ButtonTest = () => {
+    const [buttonClicked, setButtonClicked] = useState(false);
+    const onClick = () => setButtonClicked(!buttonClicked);
     return (
-      <div className="button">
-        <span>Time here</span> <span> Open slots</span>
+      <div
+        className={buttonClicked ? "button buttonClicked" : "button "}
+        onClick={onClick}
+      >
+        <span>Time here</span> <span> Open slots here</span>
         <span>{">"}</span>
       </div>
     );

@@ -8,6 +8,10 @@
   box-shadow: 1px 2px;
 }
 
+.buttonClicked {
+  background-color: #26b4d4;
+}
+
 .inlineDiv {
   border-bottom: 2px solid black;
   width: 400px;

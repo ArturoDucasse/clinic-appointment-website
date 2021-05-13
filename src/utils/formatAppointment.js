@@ -11,7 +11,7 @@
  */
 const formatAppointment = (function () {
   let hours, minutes, seconds, year, month, day;
-  let appointment = "";
+  let appointment;
 
   return {
     destructureTime: (pattern) => {
