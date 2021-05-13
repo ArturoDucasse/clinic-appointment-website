@@ -16,66 +16,66 @@ import "./style.css";
 export default function UserInfo() {
   const [
     {
-      target: { value: vorname },
+      target: { value: firstname },
     },
-    setvorname,
+    setFirstname,
   ] = useState({ target: { value: "" } });
 
   const [
     {
-      target: { value: nachname },
+      target: { value: lastName },
     },
-    setnachname,
+    setLastname,
   ] = useState({ target: { value: "" } });
   const [
     {
-      target: { value: emailAdresse },
+      target: { value: email },
     },
-    setemailAdresse,
+    setEmail,
   ] = useState({ target: { value: "" } });
   const [
     {
-      target: { value: geburtsdatum },
+      target: { value: birthday },
     },
-    setgeburtsdatum,
+    setBirthday,
   ] = useState({ target: { value: "" } });
   const [
     {
-      target: { value: krankenkasse },
+      target: { value: healthInsurance },
     },
-    setkrankenkasse,
+    setHealthInsurance,
   ] = useState({ target: { value: "" } });
   const [
     {
-      target: { value: krankenkasseNummer },
+      target: { value: healthInsuranceNumber },
     },
-    setkrankenkasseNummer,
+    setHealthInsuranceNumber,
   ] = useState({ target: { value: "" } });
   const [
     {
-      target: { value: strabe_Hausnummer },
+      target: { value: street },
     },
-    setstrabe_Hausnummer,
+    setStreet,
   ] = useState({ target: { value: "" } });
   const [
     {
-      target: { value: postleitzahl },
+      target: { value: postCode },
     },
-    setpostleitzahl,
+    setPostCode,
   ] = useState({ target: { value: "" } });
 
   const [data, setdata] = useState({});
 
   const submitInfo = async () => {
     setdata({
-      vorname,
-      nachname,
-      emailAdresse,
-      geburtsdatum,
-      krankenkasse,
-      krankenkasseNummer,
-      strabe_Hausnummer,
-      postleitzahl,
+      firstname,
+      lastName,
+      email,
+      birthday,
+      healthInsurance,
+      healthInsuranceNumber,
+      street,
+      postCode,
     });
   };
 
@@ -98,7 +98,7 @@ export default function UserInfo() {
               <TextField
                 id="input-with-icon-grid"
                 label="Vorname"
-                onChange={setvorname}
+                onChange={setFirstname}
               />
             </Grid>
           </Grid>
@@ -115,7 +115,7 @@ export default function UserInfo() {
               <TextField
                 id="input-with-icon-grid"
                 label="Nachname"
-                onChange={setnachname}
+                onChange={setLastname}
               />
             </Grid>
           </Grid>
@@ -129,7 +129,7 @@ export default function UserInfo() {
               <TextField
                 id="input-with-icon-grid"
                 label="Email Adresse"
-                onChange={setemailAdresse}
+                onChange={setEmail}
               />
             </Grid>
           </Grid>
@@ -146,7 +146,7 @@ export default function UserInfo() {
               <TextField
                 id="input-with-icon-grid"
                 label="Geburtsdatum"
-                onChange={setgeburtsdatum}
+                onChange={setBirthday}
               />
             </Grid>
           </Grid>
@@ -161,7 +161,7 @@ export default function UserInfo() {
               <TextField
                 id="input-with-icon-grid"
                 label="Krankenkasse"
-                onChange={setkrankenkasse}
+                onChange={setHealthInsurance}
               />
             </Grid>
           </Grid>
@@ -178,7 +178,7 @@ export default function UserInfo() {
               <TextField
                 id="input-with-icon-grid"
                 label="Krankenkasse Nummer"
-                onChange={setkrankenkasseNummer}
+                onChange={setHealthInsuranceNumber}
               />
             </Grid>
           </Grid>
@@ -195,7 +195,7 @@ export default function UserInfo() {
             <TextField
               id="input-with-icon-grid"
               label="Strabe + Hausnummer"
-              onChange={setstrabe_Hausnummer}
+              onChange={setStreet}
             />
           </Grid>
         </Grid>
@@ -212,7 +212,7 @@ export default function UserInfo() {
             <TextField
               id="input-with-icon-grid"
               label="Postleitzahl"
-              onChange={setpostleitzahl}
+              onChange={setPostCode}
             />
           </Grid>
         </Grid>
