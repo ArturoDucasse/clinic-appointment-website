@@ -21,8 +21,9 @@ const createUser = async (data) => {
         data: {
           user: { id: userId },
         },
-      }) => createAppointment(appointmentDate, userId)
-    );
+      }) => createAppointment(appointmentDate(), userId)
+    )
+    .catch((err) => console.log(err));
 };
 
 export default createUser;

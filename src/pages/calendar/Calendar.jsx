@@ -27,7 +27,9 @@ const Calendar = () => {
     setCurrentMonth(subMonths(currentMonth, 1));
   };
 
-  const submitDate = () => formatAppointment.destructureDate(selectedDate);
+  const submitDate = () => {
+    formatAppointment.destructureDate(selectedDate);
+  };
 
   return (
     <div className="calendar">
@@ -43,8 +45,8 @@ const Calendar = () => {
         currentMonth={currentMonth}
         selectedDate={selectedDate}
       />
-      <Button positive size="large">
-        <Link to="/time" style={{ color: "white" }} onClick={() => submitDate}>
+      <Button positive size="large" onClick={() => submitDate()}>
+        <Link to="/time" style={{ color: "white" }}>
           Weiter zur Terminauswahl
         </Link>
       </Button>

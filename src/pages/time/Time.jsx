@@ -16,12 +16,14 @@ import formatAppointment from "../../utils/formatAppointment";
 const Time = () => {
   const [appointment, setAppointment] = useState("");
 
-  const makeAppointment = (hour, minute) =>
+  const makeAppointment = (hour, minute) => {
     setAppointment(new Date(0, 0, 0, hour, minute));
+    console.log("appointmet call");
+  };
 
   const submitAppointment = () => {
     formatAppointment.destructureTime(appointment);
-    console.log("Appointment formated - Time.jsx/line-24");
+    console.log(`Appointment formated (${appointment}) - Time.jsx/line-24`);
   };
 
   return (
@@ -47,6 +49,7 @@ const Time = () => {
               timeInterval={mittagsHours}
               minuteInterval={minutesIntervals}
               maxSlot={maxSlot}
+              makeAppointment={makeAppointment}
             />
           </div>
         </div>
@@ -57,6 +60,7 @@ const Time = () => {
               timeInterval={abendsHours}
               minuteInterval={minutesIntervals}
               maxSlot={maxSlot}
+              makeAppointment={makeAppointment}
             />
           </div>
         </div>

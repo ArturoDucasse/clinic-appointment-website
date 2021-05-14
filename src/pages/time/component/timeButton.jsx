@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const TimeButton = ({ hour, minute, maxSlot, id, makeAppointment }) => {
+const TimeButton = ({ hour, minute, maxSlot, makeAppointment }) => {
   const [buttonClicked, setButtonClicked] = useState(false);
   const onClick = () => {
     setButtonClicked(!buttonClicked);
@@ -9,8 +9,7 @@ const TimeButton = ({ hour, minute, maxSlot, id, makeAppointment }) => {
   return (
     <div
       className={buttonClicked ? "button buttonClicked" : "button "}
-      onClick={onClick}
-      key={id}
+      onClick={() => onClick()}
     >
       <span>{`${hour}:${minute} Uhr`}</span>{" "}
       <span> {`${maxSlot} Platze verfugbar`}</span>

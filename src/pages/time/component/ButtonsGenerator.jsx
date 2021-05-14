@@ -1,5 +1,6 @@
 import React from "react";
 import TimeButton from "./timeButton";
+import uniqid from "uniqid";
 
 const ButtonsGenerator = ({
   timeInterval,
@@ -7,15 +8,15 @@ const ButtonsGenerator = ({
   maxSlot,
   makeAppointment,
 }) => {
-  return timeInterval.map((hour, index) => {
-    return minuteInterval.map((minute, index2) => {
+  return timeInterval.map((hour) => {
+    return minuteInterval.map((minute) => {
       return (
         <TimeButton
           hour={hour}
           minute={minute}
           maxSlot={maxSlot}
-          id={index % index2}
           makeAppointment={makeAppointment}
+          key={uniqid()}
         />
       );
     });
