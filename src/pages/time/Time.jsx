@@ -10,7 +10,7 @@ import {
   minutesIntervals,
   maxSlot,
 } from "../../utils/times";
-import ButtonsGenerator from "./component/ButtonsGenerator";
+import ButtonsGenerator from "./component/ButtonsGenerator/ButtonsGenerator";
 import formatAppointment from "../../utils/formatAppointment";
 
 const Time = () => {

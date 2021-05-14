@@ -1,5 +1,5 @@
 import React from "react";
-import TimeButton from "./timeButton";
+import TimeButton from "../timeButton/timeButton";
 import uniqid from "uniqid";
 
 const ButtonsGenerator = ({

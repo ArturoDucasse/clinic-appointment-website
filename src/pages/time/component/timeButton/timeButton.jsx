@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import "./style.css";
 
 const TimeButton = ({ hour, minute, maxSlot, makeAppointment }) => {
   const [buttonClicked, setButtonClicked] = useState(false);
   const onClick = () => {
-    setButtonClicked(!buttonClicked);
+    setButtonClicked(!buttonClicked); //This is not working for some reason
     makeAppointment(hour, minute);
+    console.log("Button clicked");
   };
   return (
     <div

@@ -1,0 +1,18 @@
+.button {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+  box-shadow: 1px 2px;
+  cursor: pointer;
+}
+
+.buttonClicked {
+  background-color: #26b4d4;
+}
+
+.button:hover {
+  background-color: #26b4d4;
+}
