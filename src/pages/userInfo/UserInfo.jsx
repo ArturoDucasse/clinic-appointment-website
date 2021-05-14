@@ -12,6 +12,7 @@ import {
 import { Button } from "semantic-ui-react";
 
 import "./style.css";
+import createUser from "../../utils/createUser";
 
 export default function UserInfo() {
   const [
@@ -66,7 +67,7 @@ export default function UserInfo() {
 
   const [data, setdata] = useState({});
 
-  const submitInfo = async () => {
+  const submitInfo = () => {
     setdata({
       username,
       lastName,
@@ -80,8 +81,9 @@ export default function UserInfo() {
   };
 
   useEffect(() => {
-    //Todo: Submit data to database here
-    console.log(data);
+    //Todo: Submit data
+
+    if (Object.keys(data).length !== 0) createUser(data);
   }, [data]);
 
   return (
@@ -96,7 +98,7 @@ export default function UserInfo() {
             </Grid>
             <Grid item>
               <TextField
-                id="input-with-icon-grid"
+                id="input-firstName"
                 label="Vorname"
                 onChange={setFirstname}
               />
@@ -113,7 +115,7 @@ export default function UserInfo() {
             </Grid>
             <Grid item>
               <TextField
-                id="input-with-icon-grid"
+                id="input-lastName"
                 label="Nachname"
                 onChange={setLastname}
               />
@@ -127,7 +129,7 @@ export default function UserInfo() {
             </Grid>
             <Grid item>
               <TextField
-                id="input-with-icon-grid"
+                id="input-Email"
                 label="Email Adresse"
                 onChange={setEmail}
               />
@@ -144,7 +146,7 @@ export default function UserInfo() {
             </Grid>
             <Grid item>
               <TextField
-                id="input-with-icon-grid"
+                id="input-birthday"
                 label="Geburtsdatum"
                 onChange={setBirthday}
               />
@@ -159,7 +161,7 @@ export default function UserInfo() {
             </Grid>
             <Grid item>
               <TextField
-                id="input-with-icon-grid"
+                id="input-healthInsurance"
                 label="Krankenkasse"
                 onChange={setHealthInsurance}
               />
@@ -176,7 +178,7 @@ export default function UserInfo() {
             </Grid>
             <Grid item>
               <TextField
-                id="input-with-icon-grid"
+                id="input-healthInsuranceNumber"
                 label="Krankenkasse Nummer"
                 onChange={setHealthInsuranceNumber}
               />
@@ -193,7 +195,7 @@ export default function UserInfo() {
           </Grid>
           <Grid item>
             <TextField
-              id="input-with-icon-grid"
+              id="input-street"
               label="Strabe + Hausnummer"
               onChange={setStreet}
             />
@@ -210,7 +212,7 @@ export default function UserInfo() {
           </Grid>
           <Grid item>
             <TextField
-              id="input-with-icon-grid"
+              id="input-postCode"
               label="Postleitzahl"
               onChange={setPostCode}
             />

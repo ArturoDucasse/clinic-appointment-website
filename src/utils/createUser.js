@@ -1,4 +1,6 @@
 import axios from "./axios";
+import createAppointment from "./createAppointment";
+import formatAppointment from "./formatAppointment";
 
 /**
  * Adds user to the database
@@ -8,10 +10,19 @@ import axios from "./axios";
  * - Email
  * @param {Object} data
  */
-const createUser = (data) => {
-  axios.post("auth/local/register", {
-    ...data,
-  });
+const createUser = async (data) => {
+  const { create: appointmentDate } = formatAppointment;
+  await axios
+    .post("auth/local/register", {
+      ...data,
+    })
+    .then(
+      ({
+        data: {
+          user: { id: userId },
+        },
+      }) => createAppointment(appointmentDate, userId)
+    );
 };
 
 export default createUser;
