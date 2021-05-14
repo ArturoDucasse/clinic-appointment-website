@@ -24,9 +24,9 @@ export default function UserInfo() {
 
   const [
     {
-      target: { value: lastName },
+      target: { value: lastname },
     },
-    setLastname,
+    setlastname,
   ] = useState({ target: { value: "" } });
   const [
     {
@@ -60,9 +60,9 @@ export default function UserInfo() {
   ] = useState({ target: { value: "" } });
   const [
     {
-      target: { value: postCode },
+      target: { value: zipcode },
     },
-    setPostCode,
+    setzipcode,
   ] = useState({ target: { value: "" } });
 
   const [data, setdata] = useState({});
@@ -70,13 +70,13 @@ export default function UserInfo() {
   const submitInfo = () => {
     setdata({
       username,
-      lastName,
+      lastname,
       email,
       birthday,
       healthInsurance,
       healthInsuranceNumber,
       street,
-      postCode,
+      zipcode,
     });
   };
 
@@ -113,9 +113,9 @@ export default function UserInfo() {
             </Grid>
             <Grid item>
               <TextField
-                id="input-lastName"
+                id="input-lastname"
                 label="Nachname"
-                onChange={setLastname}
+                onChange={setlastname}
               />
             </Grid>
           </Grid>
@@ -210,9 +210,9 @@ export default function UserInfo() {
           </Grid>
           <Grid item>
             <TextField
-              id="input-postCode"
+              id="input-zipcode"
               label="Postleitzahl"
-              onChange={setPostCode}
+              onChange={setzipcode}
             />
           </Grid>
         </Grid>

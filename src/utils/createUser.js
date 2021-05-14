@@ -10,11 +10,13 @@ import formatAppointment from "./formatAppointment";
  * - Email
  * @param {Object} data
  */
+const password = "test123"; //Todo!: Delete this, only for testing
 const createUser = async (data) => {
   const { create: appointmentDate } = formatAppointment;
   await axios
     .post("auth/local/register", {
       ...data,
+      password,
     })
     .then(
       ({
