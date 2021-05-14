@@ -66,11 +66,11 @@ const Time = () => {
         </div>
       </div>
       <div className="_button" style={{ marginTop: "50px" }}>
-        <Button positive size="large" onClick={submitAppointment}>
-          <Link to="./userInfo" style={{ color: "white" }}>
+        <Link to="./userInfo" style={{ color: "white" }}>
+          <Button positive size="large" onClick={submitAppointment}>
             Weiter zur Registration
-          </Link>
-        </Button>
+          </Button>
+        </Link>
       </div>
     </>
   );

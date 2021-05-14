@@ -45,11 +45,11 @@ const Calendar = () => {
         currentMonth={currentMonth}
         selectedDate={selectedDate}
       />
-      <Button positive size="large" onClick={() => submitDate()}>
-        <Link to="/time" style={{ color: "white" }}>
+      <Link to="/time" style={{ color: "white" }}>
+        <Button positive size="large" onClick={() => submitDate()}>
           Weiter zur Terminauswahl
-        </Link>
-      </Button>
+        </Button>
+      </Link>
     </div>
   );
 };
