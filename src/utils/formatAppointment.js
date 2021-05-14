@@ -18,15 +18,18 @@ const formatAppointment = (function () {
       hours = pattern.getHours();
       minutes = pattern.getMinutes();
       seconds = pattern.getSeconds();
+      console.log(pattern, "Time submited - formatAppointment.js ");
     },
 
     destructureDate: (pattern) => {
       year = pattern.getFullYear();
       month = pattern.getMonth();
       day = pattern.getDate();
+      console.log(pattern, "Date submited - formatAppointment.js ");
     },
     create: () => {
       appointment = new Date(year, month, day, hours, minutes, seconds);
+      console.log(appointment, "Appointment made - formatAppointment.js");
       return appointment;
     },
   };

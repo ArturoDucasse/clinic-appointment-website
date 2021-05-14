@@ -9,6 +9,7 @@ import "./styles.css";
 import RenderCells from "./components/renderCells";
 import RenderDays from "./components/renderDays";
 import RenderHeader from "./components/renderHeader";
+import formatAppointment from "../../utils/formatAppointment";
 
 const Calendar = () => {
   const [currentMonth, setCurrentMonth] = useState(new Date());
@@ -26,6 +27,8 @@ const Calendar = () => {
     setCurrentMonth(subMonths(currentMonth, 1));
   };
 
+  const submitDate = () => formatAppointment.destructureDate(selectedDate);
+
   return (
     <div className="calendar">
       <RenderHeader
@@ -41,11 +44,7 @@ const Calendar = () => {
         selectedDate={selectedDate}
       />
       <Button positive size="large">
-        <Link
-          to="/time"
-          style={{ color: "white" }}
-          onClick={() => console.log("button clicked")}
-        >
+        <Link to="/time" style={{ color: "white" }} onClick={() => submitDate}>
           Weiter zur Terminauswahl
         </Link>
       </Button>

@@ -1,27 +1,29 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
-import "./style.css";
 import { Button } from "semantic-ui-react";
 
+import "./style.css";
+import {
+  morgenHours,
+  mittagsHours,
+  abendsHours,
+  minutesIntervals,
+  maxSlot,
+} from "../../utils/times";
+import ButtonsGenerator from "./component/ButtonsGenerator";
+import formatAppointment from "../../utils/formatAppointment";
+
 const Time = () => {
-  //Todo: Move this to its own file
-  const ButtonTest = () => {
-    const [buttonClicked, setButtonClicked] = useState(false);
-    const onClick = () => setButtonClicked(!buttonClicked);
-    return (
-      <div
-        className={buttonClicked ? "button buttonClicked" : "button "}
-        onClick={onClick}
-      >
-        <span>Time here</span> <span> Open slots here</span>
-        <span>{">"}</span>
-      </div>
-    );
+  const [appointment, setAppointment] = useState("");
+
+  const makeAppointment = (hour, minute) =>
+    setAppointment(new Date(0, 0, 0, hour, minute));
+
+  const submitAppointment = () => {
+    formatAppointment.destructureTime(appointment);
+    console.log("Appointment formated - Time.jsx/line-24");
   };
 
-  //Todo!: Refactor
-  //Todo: Create time logic
   return (
     <>
       <h1>Wahlen sie die Uhrzeit aus:</h1>
@@ -30,27 +32,37 @@ const Time = () => {
         <div className="Morgens" style={{ width: "350px" }}>
           <h2>Morgens</h2>
           <div className="times_container">
-            <ButtonTest />
-            <ButtonTest />
+            <ButtonsGenerator
+              timeInterval={morgenHours}
+              minuteInterval={minutesIntervals}
+              maxSlot={maxSlot}
+              makeAppointment={makeAppointment}
+            />
           </div>
         </div>
         <div className="Mittags " style={{ width: "350px" }}>
           <h2>Mittags</h2>
           <div className="times_container">
-            <ButtonTest />
-            <ButtonTest />
+            <ButtonsGenerator
+              timeInterval={mittagsHours}
+              minuteInterval={minutesIntervals}
+              maxSlot={maxSlot}
+            />
           </div>
         </div>
         <div className="Abends" style={{ width: "350px" }}>
           <h2>Abends</h2>
           <div className="times_container">
-            <ButtonTest />
-            <ButtonTest />
+            <ButtonsGenerator
+              timeInterval={abendsHours}
+              minuteInterval={minutesIntervals}
+              maxSlot={maxSlot}
+            />
           </div>
         </div>
       </div>
       <div className="_button" style={{ marginTop: "50px" }}>
-        <Button positive size="large">
+        <Button positive size="large" onClick={submitAppointment}>
           <Link to="./userInfo" style={{ color: "white" }}>
             Weiter zur Registration
           </Link>

@@ -81,8 +81,6 @@ export default function UserInfo() {
   };
 
   useEffect(() => {
-    //Todo: Submit data
-
     if (Object.keys(data).length !== 0) createUser(data);
   }, [data]);
 
