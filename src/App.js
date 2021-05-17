@@ -26,10 +26,3 @@ function App() {
 }
 
 export default App;
-
-//Pick time
-//Pick date
-//Set date for appointment
-//Register user
-//Then
-//Create appointment
