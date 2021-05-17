@@ -29,12 +29,10 @@ const ButtonsGenerator = ({
   }, []);
 
   return timeInterval.map((hour) => {
-    let temp = false;
     return minuteInterval.map((minute) => {
       slotsAvailable(hour, Number(minute), appointments).then(
         ({ counter, match }) => {
           if (match) setTakenSlots(counter);
-          if (!match && temp) setTakenSlots(0);
         }
       );
       return (

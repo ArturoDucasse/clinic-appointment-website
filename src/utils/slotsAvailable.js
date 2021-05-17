@@ -1,3 +1,10 @@
+/**
+ *
+ * @param {Int} hour
+ * @param {Int} minutes
+ * @param {Array} appointments
+ * @returns
+ */
 const slotsAvailable = async (hour, minutes, appointments) => {
   let data = { counter: 0, match: false };
 
@@ -8,7 +15,7 @@ const slotsAvailable = async (hour, minutes, appointments) => {
       data.counter++;
       data.match = true;
       console.log(
-        `Appointment made ${date.getHours()}:${date.getMinutes()}, button ${hour}:${minutes} `
+        `Match found, appointment value = ${date.getHours()}:${date.getMinutes()} / button value = ${hour}:${minutes} `
       );
       console.log(data.match, "match found");
     }
