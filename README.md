@@ -6,7 +6,7 @@
 </h2>
 
 ## Description 📄
-Website for COVID-19 centers, enables users to create appointments any time, any where.
+Website for COVID-19 centers, enables users to create appointments any time, anywhere.
 
 ## Features
 ⚡️ Register users\
