@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# clinic-appointment-website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2 align="center">
+  <img src="https://github.com/R2rit0/Face-Recognition-Front-End/blob/563c4616032f013e7120ad78cd11fa8ef3bfc3f2/public/Screenshot%202021-04-19%20090155.png" alt="" width="600px" />
+  <br>
+</h2>
 
-## Available Scripts
+## Description 📄
 
-In the project directory, you can run:
 
-### `yarn start`
+## Features
+⚡️ Register users\
+⚡️ Accepts user input\
+⚡️ Fully Responsive\
+⚡️ Easy site customization\
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Prerequisites 📋
 
-### `yarn test`
+You'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [NPM](http://npmjs.com)) installed.
+```
+node@v10.16.0 or higher
+npm@6.9.0 or higher
+git@2.17.1 or higher
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Dependencies 🗃️
+- react
+- react-dom
+- react-scripts
+- react-tilt
+- web-vitals
+- jest
 
-### `yarn build`
+## How To Use 🔧
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+From your command line, first clone netflix-clone:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+# Clone this repository
+$ git clone https://github.com/R2rit0/Face-Recognition-Front-End.git
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Go into the repository
+$ cd Face-Recognition-Front-End
 
-### `yarn eject`
+# Remove current origin repository
+$ git remote remove origin
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Then you can install the dependencies:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+# Install dependencies
+$ npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Start development server
+$ npm run develop
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Start testing
+$ npm test
 
-## Learn More
+# Create build
+$ npm run build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Note**:
+Make sure to start back-end, repo: https://github.com/R2rit0/Face-Recognition-Back-End 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Technologies/libraries used 🛠️
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [React](https://es.reactjs.org/) - Front-End JavaScript library.
+- [Jest](https://jestjs.io/) - Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
+- [Tachyons](https://tachyons.io/) - CSS extension language.
+- [Github Pages](https://pages.github.com/) - A static site hosting service that takes files straight from a repository on GitHub.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contributing 💡
+Issue Tracker: github.com/Face-Recognition-Front-End/issues.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Contact 
+- [Gmail](https://mail.google.com/mail/u/0/?fs=1&to=ArturoM.Ducasse@gmail.com&su=Job-related&tf=cm "Gmail direct link")
+- [Github](https://github.com/R2rit0 "Github profile")
+- [Discord](https://discordapp.com/users/362837852507209730/ "Discord profile")
