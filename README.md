@@ -1,7 +1,7 @@
 # clinic-appointment-website
 
 <h2 align="center">
-  <img src="https://github.com/R2rit0/Face-Recognition-Front-End/blob/563c4616032f013e7120ad78cd11fa8ef3bfc3f2/public/Screenshot%202021-04-19%20090155.png" alt="" width="600px" />
+  <img src="" alt="" width="600px" />
   <br>
 </h2>
 
@@ -57,15 +57,9 @@ $ npm install
 # Start development server
 $ npm run develop
 
-# Start testing
-$ npm test
-
 # Create build
 $ npm run build
 ```
-
-**Note**:
-Make sure to start back-end, repo: https://github.com/R2rit0/Face-Recognition-Back-End 
 
 ---
 
