@@ -1,4 +1,4 @@
-# clinic-appointment-website
+# Appointment website
 
 <h2 align="center">
   <img src="https://github.com/R2rit0/clinic-appointment-website/blob/3e27b5fdb80fcaedbae51269b7e126cbbec0341b/src/images/Website%20capture.png" alt="clinic-website" width="600px" />
