@@ -10,9 +10,7 @@ const ButtonsGenerator = ({
   maxSlot,
   makeAppointment,
 }) => {
-  const [slots, setSlots] = useState(maxSlot);
   const [appointments, setAppointments] = useState([]);
-  const [takenSlots, setTakenSlots] = useState(0);
 
   //Fetch appointments
   //Filter appointments that match the hour, minute in the iteration
@@ -30,16 +28,23 @@ const ButtonsGenerator = ({
 
   return timeInterval.map((hour) => {
     return minuteInterval.map((minute) => {
-      slotsAvailable(hour, Number(minute), appointments).then(
-        ({ counter, match }) => {
-          if (match) setTakenSlots(counter);
-        }
+      let takenSlots = 0;
+      const { counter, match } = slotsAvailable(
+        hour,
+        Number(minute),
+        appointments
       );
+
+      if (match) {
+        takenSlots = counter;
+        console.log(match, "match");
+      }
+
       return (
         <TimeButton
           hour={hour}
           minute={minute}
-          maxSlot={slots - takenSlots}
+          maxSlot={maxSlot - takenSlots}
           makeAppointment={makeAppointment}
           key={uniqid()}
         />

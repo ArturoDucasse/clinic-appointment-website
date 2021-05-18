@@ -5,7 +5,7 @@
  * @param {Array} appointments
  * @returns
  */
-const slotsAvailable = async (hour, minutes, appointments) => {
+const slotsAvailable = (hour, minutes, appointments) => {
   let data = { counter: 0, match: false };
 
   appointments.map(({ Appointment }) => {
@@ -20,6 +20,7 @@ const slotsAvailable = async (hour, minutes, appointments) => {
       console.log(data.match, "match found");
     }
   });
+
   return data;
 };
 
