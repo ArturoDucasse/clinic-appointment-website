@@ -1,12 +1,12 @@
-# clinic-appointment-website
+# Appointment website
 
 <h2 align="center">
-  <img src="" alt="" width="600px" />
+  <img src="https://github.com/R2rit0/clinic-appointment-website/blob/3e27b5fdb80fcaedbae51269b7e126cbbec0341b/src/images/Website%20capture.png" alt="clinic-website" width="600px" />
   <br>
 </h2>
 
 ## Description 📄
-
+Website for COVID-19 centers, enables users to create appointments any time, anywhere.
 
 ## Features
 ⚡️ Register users\
@@ -28,10 +28,15 @@ git@2.17.1 or higher
 ## Dependencies 🗃️
 - react
 - react-dom
+- react-router-dom
 - react-scripts
+- uniqid
 - react-tilt
 - web-vitals
-- jest
+- axios 
+- date-fns
+- semantic-ui-react
+- material-ui/core
 
 ## How To Use 🔧
 
@@ -55,7 +60,7 @@ Then you can install the dependencies:
 $ npm install
 
 # Start development server
-$ npm run develop
+$ npm start
 
 # Create build
 $ npm run build
@@ -66,10 +71,11 @@ $ npm run build
 ## Technologies/libraries used 🛠️
 
 - [React](https://es.reactjs.org/) - Front-End JavaScript library.
-- [Jest](https://jestjs.io/) - Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
-- [Tachyons](https://tachyons.io/) - CSS extension language.
-- [Github Pages](https://pages.github.com/) - A static site hosting service that takes files straight from a repository on GitHub.
-
+- [axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js.
+- [Material-UI](https://material-ui.com/) - CSS extension language.
+- [Semantic-UI](https://semantic-ui.com/) - CSS extension language.
+- [Uniqid](https://github.com/adamhalasz/uniqid) - Unique ID Generator.
+- [Netlify](https://www.netlify.com/) - An intuitive Git-based workflow and powerful serverless platform to build, deploy, and collaborate on web apps.
 
 ## Contributing 💡
 Issue Tracker: github.com/Face-Recognition-Front-End/issues.
