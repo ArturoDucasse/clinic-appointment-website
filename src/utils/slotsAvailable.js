@@ -8,7 +8,7 @@
 const slotsAvailable = (hour, minutes, appointments) => {
   let data = { counter: 0, match: false };
 
-  appointments.map(({ Appointment }) => {
+  appointments.forEach(({ Appointment }) => {
     const date = new Date(Appointment);
 
     if (date.getHours() === hour && date.getMinutes() === minutes) {
